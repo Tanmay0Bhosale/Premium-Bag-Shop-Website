@@ -1,7 +1,4 @@
 const mongoose = require('mongoose');
-import { is } from './../node_modules/@types/whatwg-url/lib/URL.d';
-
-mongoose.connect('mogodb://127.0.0.1:27017/premiumbagshop');
 
 const userSchema = new mongoose.Schema({
     fullname : {
