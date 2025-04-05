@@ -1,9 +1,11 @@
 const mongoose = require('mongoose');
+const config = require('config');
 
-mongoose.connect("mongodb://127.0.0.1:27017/premiumbagshop")
+const dbgr = require('debug')('development:mongoose');
+mongoose.connect(`${config.get('MONGODB_URI')}/premiumbagshop`)
 .then(function(){
-    console.log("MongoDB connected successfully");
+    dbgr("MongoDB connected successfully");
 })
 .catch(function(err){
-    console.log(err);
+    dbgr(err);
 })
