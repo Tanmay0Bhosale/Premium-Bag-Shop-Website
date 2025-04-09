@@ -4,6 +4,7 @@ const app = express();
 const cookieParser = require('cookie-parser');
 const path = require('path');
 const db = require('./config/mongooseConnection');
+require("dotenv").config();
 
 const ownersRouter = require('./routes/ownersRouter');
 const usersRouter = require('./routes/usersRouter');
