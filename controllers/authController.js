@@ -39,7 +39,7 @@ module.exports.loginUser = async (req, res) => {
         if(result){
             let token = generateToken(user);
             res.cookie('token' , token);
-            res.send("you can login!")
+            res.render("shop");     
         }else{
             res.send("OOps SOmething went wrong!!!!")
         }

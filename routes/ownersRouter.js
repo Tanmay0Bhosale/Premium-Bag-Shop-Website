@@ -8,7 +8,7 @@ if(process.env.NODE_ENV === "development"){
         if(owners.length > 0){
             return res
                 .status(504)
-                .send('You dont have permission to create a new onwer');
+                .send('You dont have permission to create a new owner');
         }
 
         let {fullname, email, password} = req.body;
